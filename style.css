@@ -2,3 +2,45 @@ h1 {
     background-color: peachpuff;
     border: 1px solid maroon;
 }
+
+.border {
+    border: 1px solid maroon;
+}
+
+ul {
+    padding: 0;
+}
+
+button {
+    margin: 5px;
+}
+
+/*
+    FLEX
+*/
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.character {
+    flex: 1;
+}
+
+.center {
+    justify-self: center;
+    align-items: center;
+}
+
+/*
+    GRID
+*/
+
+.letter-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+}

@@ -1,9 +1,9 @@
 let letterList = document.querySelectorAll(".letter-list");
 let resetButton = document.querySelectorAll('.reset');
-const JORO = document.getElementById('joro');
-const SYN = document.getElementById('syn');
-const MAZ = document.getElementById('maz');
-const NIX = document.getElementById('nix');
+const JORO_LIST = document.getElementById('joro-list');
+const SYN_LIST = document.getElementById('syn-list');
+const MAZ_LIST = document.getElementById('maz-list');
+const NIX_LIST = document.getElementById('nix-list');
 
 letterList.forEach((list) => {
     for(i = 0; i < 26; i++) {
@@ -11,19 +11,21 @@ letterList.forEach((list) => {
         let currentAlphabet = String.fromCharCode(65 + i);
         button.classList.add(`${currentAlphabet}`);
         button.textContent = currentAlphabet;
+        // TEMP - FOR TESTING ONLY
+        button.addEventListener('click', () => {
+            button.disabled = true;
+        });
         list.appendChild(button);
     }
 });
 
-
-console.log(JORO.children[0].textContent.charCodeAt());
-
 resetButton.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log();
+        let list = button.previousElementSibling.children;
+        for(let i = 0; i < list.length; i++) {
+            if(list[i].disabled) {
+                list[i].disabled = false;
+            }
+        };
     });
 });
-
-let masterList = document.getElementById('master-list');
-
-console.log(masterList);

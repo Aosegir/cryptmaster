@@ -1,18 +1,45 @@
-h1 {
-    background-color: peachpuff;
-    border: 1px solid maroon;
+* {
+    margin: 0;
+    padding: 0;
+    background: #28292b;
+    margin: 5px;
 }
 
 .border {
-    border: 1px solid maroon;
+    border: 1px solid #e9eef7;
 }
 
 ul {
     padding: 0;
 }
 
+h2 {
+    color: #e9eef7;
+    font-weight: 1000;
+    font-size: 3rem;
+    letter-spacing: 7px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 button {
     margin: 5px;
+    height: 30px;
+    width: 30px;
+    color: #e9eef7;
+    border: 2px solid #e9eef7;
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button:disabled {
+    color: #9aa3b3;
+    border: 2px solid #9aa3b3;
+}
+
+.reset {
+    height: 50px;
+    width: 90px;
 }
 
 /*
